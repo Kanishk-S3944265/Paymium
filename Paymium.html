@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Crypto Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0e23;
+      color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .signup-box {
+      background-color: #1e1b3a;
+      padding: 40px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.95em;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2b2751;
+      color: white;
+    }
+
+    .signup-button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4c3ee9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #372bb8;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .login-link a {
+      color: #827cf9;
+      text-decoration: none;
+    }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #292653;
+      padding: 20px;
+      color: white;
+      font-size: 0.9em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .cookie-banner button {
+      margin-left: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cookie-ok {
+      background-color: #4c3ee9;
+      color: white;
+    }
+
+    .cookie-choose {
+      background-color: #ffffff22;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="signup-box">
+      <h2>Sign up</h2>
+
+      <label>Account type</label>
+      <label><input type="radio" name="account" value="personal" checked> Personal</label>
+      <label><input type="radio" name="account" value="professional"> Professional</label>
+
+      <label for="referral">Do you have a referral code?</label>
+      <input type="text" id="referral" placeholder="Enter referral code (optional)">
+
+      <button class="signup-button">Sign up</button>
+
+      <div class="login-link">
+        Do you already have an account? <a href="#">Log in</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <span>Cookies for your bitcoins! 🍪 We use cookies to optimize your experience. You choose the ones you like.</span>
+    <div>
+      <button class="cookie-choose" onclick="hideCookieBanner()">I want to choose</button>
+      <button class="cookie-ok" onclick="hideCookieBanner()">OK!</button>
+    </div>
+  </div>
+
+  <script>
+    function hideCookieBanner() {
+      document.getElementById("cookieBanner").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
